@@ -172,6 +172,8 @@ class _NCDFWriterTest(TestCase):
         nc_orig = self.universe.trajectory.trjfile
         nc_copy = uw.trajectory.trjfile
 
+        # note that here 'dimensions' is a specific netcdf data structure and
+        # not the unit cell dimensions in MDAnalysis
         for k, dim in nc_orig.dimensions.items():
             try:
                 dim_new = nc_copy.dimensions[k]
