@@ -33,6 +33,7 @@ install:
   - source activate pyenv
   - if [[ $SETUP == 'full' ]]; then conda install --yes python=$TRAVIS_PYTHON_VERSION cython biopython matplotlib networkx netcdf4; fi
   - if [[ $SETUP == 'minimal' ]]; then conda install --yes python=$TRAVIS_PYTHON_VERSION biopython networkx; fi
+  - pip install GridDataFormats
   - if [[ $CYTHONIZE == 'true' ]]; then find . -name '*.pyx' -exec touch '{}' \; ;fi
   - pip install -v package/
   - pip install testsuite/
