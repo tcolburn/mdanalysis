@@ -47,6 +47,7 @@ def test_version_format(version=None):
     assert_(m, "version {0} does not match the MAJOR.MINOR.PATCH(-suffix) format".format(version))
 
 
+@knownfailure
 def test_version_at_packagelevel():
     import MDAnalysis
     try:
