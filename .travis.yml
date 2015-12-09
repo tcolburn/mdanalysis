@@ -17,6 +17,7 @@ addons:
   apt:
     packages:
       - gfortran
+      - libgfortran
       - libhdf5-serial-dev
       - libnetcdf-dev
       - liblapack-dev
